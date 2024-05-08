@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttonsContainer = document.getElementById('buttons');
     const stopButton = document.querySelector('.stop');
+    const soundsFolder = 'sounds/';
 
     // Add event listener to each button
     buttonsContainer.addEventListener('click', function(event) {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to play a sound
     function playSound(sound) {
-        const audio = new Audio(`sounds/${sound}`);
+        const audio = new Audio(soundsFolder + sound);
         audio.play();
     }
 
